@@ -9,8 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                ForEach(0..<20) { index in
+                    MovieListItemView()
+                }
+            }
+            .navigationTitle("Popular Movies")
+        }
     }
 }
 
