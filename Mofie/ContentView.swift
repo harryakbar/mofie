@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var movies: MovieList = MovieList(page: 0, results: [])
+    
     var body: some View {
         NavigationView {
-            List {
-                ForEach(0..<20) { index in
-                    MovieListItemView()
+            List(movies.results) { movie in
+                MovieListItemView(movie: movie)
+            }
+            .onAppear {
+                Api().getMovies { (movies) in
+                    self.movies = movies
                 }
             }
-            .navigationTitle("Popular Movies")
+            .navigationTitle("🎥 Popular Movies")
         }
     }
 }

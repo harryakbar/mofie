@@ -26,39 +26,41 @@ extension String {
 }
 
 struct MovieListItemView: View {
+    var movie: Movie = Movie(id: 0, original_title: "", overview: "", poster_path: "", vote_average: 0, release_date: "")
+
     var body: some View {
         NavigationLink(
-            destination: MovieDetailView()
+            destination: MovieDetailView(movie: movie)
         ) {
             HStack (alignment: .center) {
-                Image(uiImage: "https://www.themoviedb.org/t/p/w440_and_h660_face/kEl2t3OhXc3Zb9FBh1AuYzRTgZp.jpg".load()
+                Image(uiImage: "https://image.tmdb.org/t/p/w500/\(movie.poster_path ?? "")".load()
                 )
                 .resizable()
                 .scaledToFit()
                 .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
                 .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 8, x: 6, y: 8)
                 .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: 85, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxHeight: 120)
-                .padding(.horizontal, 8)
+                .padding(.trailing, 8)
 
                 VStack(alignment: .leading) {
-                    Text("Loki")
+                    Text(movie.original_title)
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    Text("Jun 09, 2021")
+                    Text(movie.release_date)
                         .font(.subheadline)
                     
                     HStack {
                         Text("User Score:")
                             .font(.subheadline)
-                        Text("81")
+                        Text(String(format:"%.01f", movie.vote_average))
                             .font(.title2)
                     }
                     
-                    Text("After stealing the Tesseract during the events of “Avengers: Endgame,” an alternate version of Loki is brought to the mysterious Time Variance Authority, a bureaucratic organization that exists outside of time and space and monitors the timeline. They give Loki a choice: face being erased from existence due to being a “time variant”or help fix the timeline and stop a greater threat.")
+                    Text(movie.overview)
                         .font(.subheadline)
                         .italic()
                         .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxHeight: 70, alignment: .leading)
-                } // VStack
+                } // VStack#imageLiteral(resourceName: "simulator_screenshot_11331693-10F0-4975-9BE3-C07E8FE292B2.png")
             } // HStack
         }
     }

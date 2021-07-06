@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E41FDA602694B2E40051551E /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41FDA5F2694B2E40051551E /* MovieList.swift */; };
 		E4851614269350B500C7B95A /* MofieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4851613269350B500C7B95A /* MofieApp.swift */; };
 		E4851616269350B500C7B95A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4851615269350B500C7B95A /* ContentView.swift */; };
 		E4851618269350B900C7B95A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4851617269350B900C7B95A /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E41FDA5F2694B2E40051551E /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
 		E4851610269350B500C7B95A /* Mofie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mofie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4851613269350B500C7B95A /* MofieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MofieApp.swift; sourceTree = "<group>"; };
 		E4851615269350B500C7B95A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		E48516242693521D00C7B95A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E41FDA5F2694B2E40051551E /* MovieList.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				E4851616269350B500C7B95A /* ContentView.swift in Sources */,
 				E4851614269350B500C7B95A /* MofieApp.swift in Sources */,
 				E485162826935EC100C7B95A /* MovieDetailView.swift in Sources */,
+				E41FDA602694B2E40051551E /* MovieList.swift in Sources */,
 				E48516262693523900C7B95A /* MovieListItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
