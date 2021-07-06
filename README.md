@@ -1,7 +1,7 @@
 # mofie
 Movie db list iOS Apps
 
-DB is using [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction)
+Data is from [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction)
 
 Sneakpeek of Mofie:
 
